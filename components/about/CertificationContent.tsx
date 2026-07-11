@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Award, ShieldCheck } from 'lucide-react';
 import { CERTIFICATIONS } from '@/lib/data';
+import Image from 'next/image';
 
 export default function CertificationContent() {
   return (
@@ -41,15 +42,10 @@ export default function CertificationContent() {
               className="group bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all border border-border-light"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl bg-green-pale group-hover:bg-gold flex items-center justify-center transition-colors">
-                  <Award className="w-7 h-7 text-green-primary group-hover:text-white transition-colors" />
-                </div>
-                <div>
-                  <h3 className="font-jakarta font-bold text-xl text-text-dark">{cert.name}</h3>
-                  <p className="text-xs text-gold font-poppins font-medium">{cert.full}</p>
-                </div>
+                <Image src={cert.image} alt={cert.name} width={56} height={56} className="w-14 h-14 rounded-xl object-cover" />
+           
               </div>
-              <p className="text-sm text-text-muted leading-relaxed">{cert.desc}</p>
+         
             </motion.div>
           ))}
         </div>
