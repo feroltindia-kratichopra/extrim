@@ -16,14 +16,14 @@ const SLIDES = [
   },
   {
     image: '/images/heroimages/3.png',
-    title: 'Premium Psyllium Products',
+    title: 'Premium Psyllium Husk',
     subtitle: 'Pharmacopeia-grade psyllium husk from Gujarat — the world’s finest source.',
     cta1: { label: 'Get a Quote', href: '/contact' },
     cta2: { label: 'View Details', href: '/products/psyllium-husk' },
   },
   {
     image: '/images/heroimages/2.png',
-    title: 'Eco-Friendly Packaging Solutions',
+    title: 'Eco-Friendly Packaging Products',
     subtitle: 'Sustainable, biodegradable packaging for a greener planet.',
     cta1: { label: 'Get a Quote', href: '/contact' },
     cta2: { label: 'View Details', href: '/products/eco-friendly-packaging' },
