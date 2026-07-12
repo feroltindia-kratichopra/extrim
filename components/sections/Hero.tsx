@@ -30,10 +30,10 @@ const SLIDES = [
   },
   {
     image: '/images/heroimages/4.png',
-    title: 'Quality Garments Export',
-    subtitle: 'Ethically manufactured apparel — from casual wear to premium fashion.',
+    title: 'Gift Bags',
+    subtitle: 'Premium-quality gift bags in a variety of designs, materials, and finishes — perfect for retail and gifting.',
     cta1: { label: 'Get a Quote', href: '/contact' },
-    cta2: { label: 'View Details', href: '/products/garments' },
+    cta2: { label: 'View Details', href: '/products/gift-bags' },
   },
 ];
 
