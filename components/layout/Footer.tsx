@@ -27,9 +27,9 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3 mb-5">
               <div className="relative w-12 h-12">
-                <Image src="/images/logo/logo.png" alt="JD EXIM Logo" fill className="object-contain" />
+              <Image src="/images/logo/logo1_icon.png" alt="JD EXIM Logo" fill className="object-contain" priority />
               </div>
-              <span className="font-jakarta font-bold text-xl text-green-dark">JD EXIM</span>
+              <Image src="/images/logo/logo1_name.png" alt="JD EXIM Logo" width={100} height={100}/>
             </Link>
             <p className="text-sm leading-relaxed mb-5">
               {COMPANY.description}
@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* Column 2: Products */}
           <div>
-            <h3 className="font-jakarta font-bold text-green-dark text-lg mb-5">Product Categories</h3>
+            <h3 className="font-jakarta font-bold text-blue-800 text-lg mb-5">Product Categories</h3>
             <ul className="space-y-3">
               {PRODUCTS.map((p) => (
                 <li key={p.slug}>
@@ -67,16 +67,27 @@ export default function Footer() {
 
           {/* Column 3: Quick Links */}
           <div>
-            <h3 className="font-jakarta font-bold text-green-dark text-lg mb-5">Quick Links</h3>
+            <h3 className="font-jakarta font-bold text-blue-800 text-lg mb-5">Quick Links</h3>
             <ul className="space-y-3">
-              {NAV_LINKS.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm hover:text-gold transition-colors flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {NAV_LINKS.flatMap((link) =>
+                link.children
+                  ? link.children.map((child) => (
+                      <li key={child.href}>
+                        <Link href={child.href} className="text-sm hover:text-gold transition-colors flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))
+                  : [
+                      <li key={link.label}>
+                        <Link href={link.href!} className="text-sm hover:text-gold transition-colors flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                          {link.label}
+                        </Link>
+                      </li>,
+                    ]
+              )}
               <li>
                 <Link href="/privacy-policy" className="text-sm hover:text-gold transition-colors flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold" />
@@ -94,7 +105,7 @@ export default function Footer() {
 
           {/* Column 4: Newsletter + Contact */}
           <div>
-            <h3 className="font-jakarta font-bold text-green-dark text-lg mb-5">Contact Us</h3>
+            <h3 className="font-jakarta font-bold text-blue-800 text-lg mb-5">Contact Us</h3>
             <div className="space-y-3 text-sm">
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
@@ -125,7 +136,7 @@ export default function Footer() {
       {/* Copyright bar */}
       <div className="border-t border-border-light">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-white/60">
+          <p className="text-xs ">
             &copy; {new Date().getFullYear()} JD EXIM. All rights reserved.
           </p>
           <p className="text-xs text-white/60">

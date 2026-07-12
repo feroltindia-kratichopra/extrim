@@ -1,14 +1,18 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Check, ArrowRight, Package, Truck, ShieldCheck, Factory } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Check, ArrowRight, Package, Truck, ShieldCheck, Factory, X } from 'lucide-react';
+import ProductCategoryGallery, { ProductImageCategory } from '@/components/products/ProductCategoryGallery';
 
 interface ProductDetailProps {
   name: string;
   tagline: string;
   image: string;
+  images?: string[];
+  imageCategories?: ProductImageCategory[];
   shortDesc: string;
   features: string[];
   highlights: string[];
@@ -21,6 +25,8 @@ export default function ProductDetail({
   name,
   tagline,
   image,
+  images,
+  imageCategories,
   shortDesc,
   features,
   highlights,
@@ -28,6 +34,8 @@ export default function ProductDetail({
   applications,
   packaging,
 }: ProductDetailProps) {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
   return (
     <div className="py-16 bg-bg-light">
       <div className="max-w-7xl mx-auto px-6">
@@ -87,6 +95,44 @@ export default function ProductDetail({
             </div>
           </motion.div>
         </div>
+
+        {imageCategories && imageCategories.length > 0 && (
+          <ProductCategoryGallery categories={imageCategories} />
+        )}
+
+        {images && images.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-20"
+          >
+            <h2 className="font-jakarta font-bold text-2xl text-text-dark mb-2">Product Gallery</h2>
+            <p className="text-text-muted mb-8">Browse our full range of {name.toLowerCase()} products.</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {images.map((src, i) => (
+                <motion.button
+                  key={src}
+                  type="button"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: i * 0.04 }}
+                  className="group relative aspect-square rounded-2xl overflow-hidden shadow-card cursor-pointer"
+                  onClick={() => setLightbox(src)}
+                >
+                  <Image
+                    src={src}
+                    alt={`${name} ${i + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* Detailed description */}
         <motion.div
@@ -171,6 +217,35 @@ export default function ProductDetail({
           </Link>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-6"
+            onClick={() => setLightbox(null)}
+          >
+            <button
+              className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/30 transition-colors"
+              onClick={() => setLightbox(null)}
+              aria-label="Close"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="relative w-full max-w-4xl h-[70vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image src={lightbox} alt={`${name} preview`} fill className="object-contain rounded-2xl" />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import PageHeader from '@/components/layout/PageHeader';
 import CertificationContent from '@/components/about/CertificationContent';
-import CTASection from '@/components/layout/CTASection';
+
 
 export const metadata = {
   title: 'Certifications — JD EXIM',
@@ -14,10 +14,10 @@ export default function CertificationPage() {
       <PageHeader
         title="Certifications"
         subtitle="Our credentials reflect our commitment to international quality and compliance."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Certification' }]}
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About' }, { label: 'Certification' }]}
       />
       <CertificationContent />
-      <CTASection />
+
     </PageWrapper>
   );
 }

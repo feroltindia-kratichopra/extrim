@@ -1,6 +1,7 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import PageHeader from '@/components/layout/PageHeader';
 import ProductDetail from '@/components/products/ProductDetail';
+import { PSYLLIUM_HUSK_IMAGES } from '@/lib/data';
 
 export const metadata = {
   title: 'Psyllium Husk — JD EXIM',
@@ -13,12 +14,13 @@ export default function PsylliumHuskPage() {
       <PageHeader
         title="Psyllium Husk"
         subtitle="Premium-grade natural dietary fiber from India’s finest farms."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Products', href: '/products' }, { label: 'Psyllium Husk' }]}
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Products' }, { label: 'Psyllium Husk' }]}
       />
       <ProductDetail
         name="Psyllium Husk"
         tagline="Premium-grade natural dietary fiber from India"
-        image="https://images.pexels.com/photos/4750274/pexels-photo-4750274.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        image="/images/seeds/1.jpeg"
+        images={PSYLLIUM_HUSK_IMAGES}
         shortDesc="Sourced from the finest farms in Gujarat, our psyllium husk meets stringent international pharmacopeia standards."
         features={[
           'Psyllium Husk 85% – 99% Purity',

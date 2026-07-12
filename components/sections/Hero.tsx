@@ -8,28 +8,28 @@ import { ArrowRight, Package } from 'lucide-react';
 
 const SLIDES = [
   {
-    image: 'https://images.pexels.com/photos/2240207/pexels-photo-2240207.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: '/images/heroimages/1.png',
     title: 'Your Trusted Global Export Partner',
     subtitle: 'Premium-quality products sourced ethically from India, delivered to 40+ countries worldwide.',
     cta1: { label: 'Get a Quote', href: '/contact' },
     cta2: { label: 'Explore Products', href: '/products' },
   },
   {
-    image: 'https://images.pexels.com/photos/4750274/pexels-photo-4750274.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: '/images/heroimages/2.png',
     title: 'Premium Psyllium Products',
     subtitle: 'Pharmacopeia-grade psyllium husk from Gujarat — the world’s finest source.',
     cta1: { label: 'Get a Quote', href: '/contact' },
     cta2: { label: 'View Details', href: '/products/psyllium-husk' },
   },
   {
-    image: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: '/images/heroimages/3.png',
     title: 'Eco-Friendly Packaging Solutions',
     subtitle: 'Sustainable, biodegradable packaging for a greener planet.',
     cta1: { label: 'Get a Quote', href: '/contact' },
     cta2: { label: 'View Details', href: '/products/eco-friendly-packaging' },
   },
   {
-    image: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: '/images/heroimages/4.png',
     title: 'Quality Garments Export',
     subtitle: 'Ethically manufactured apparel — from casual wear to premium fashion.',
     cta1: { label: 'Get a Quote', href: '/contact' },
@@ -66,7 +66,7 @@ export default function Hero() {
           >
             <Image src={SLIDES[current].image} alt={SLIDES[current].title} fill className="object-cover" priority />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-r from-green-dark/90 via-green-dark/70 to-green-dark/40" />
+          <div className="absolute inset-0 bg-gray-200/40" />
         </motion.div>
       </AnimatePresence>
 
@@ -92,26 +92,26 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="max-w-2xl"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 border border-gold/40 text-gold text-sm font-medium mb-6">
+            {/* <span className="inline-block px-4 py-1.5 rounded-full bg-gold/20 border border-gold/40 text-gold text-sm font-medium mb-6">
               {current === 0 ? 'Welcome to JD EXIM' : `Product Highlight ${current}`}
-            </span>
-            <h1 className="font-jakarta font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-tight mb-5">
+            </span> */}
+            <h1 className="font-jakarta font-bold  text-4xl md:text-5xl lg:text-6xl leading-tight mb-5">
               {SLIDES[current].title}
             </h1>
-            <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+            <p className=" text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
               {SLIDES[current].subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href={SLIDES[current].cta1.href}
-                className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white font-poppins font-semibold px-7 py-3.5 rounded-full transition-all shadow-gold hover:shadow-lg hover:scale-105"
+                className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark font-poppins font-semibold px-7 py-3.5 rounded-full transition-all shadow-gold hover:shadow-lg hover:scale-105"
               >
                 {SLIDES[current].cta1.label}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href={SLIDES[current].cta2.href}
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 text-white font-poppins font-semibold px-7 py-3.5 rounded-full transition-all hover:bg-white/20 hover:scale-105"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-gold font-poppins font-semibold px-7 py-3.5 rounded-full transition-all hover:bg-white/20 hover:scale-105"
               >
                 <Package className="w-4 h-4" />
                 {SLIDES[current].cta2.label}

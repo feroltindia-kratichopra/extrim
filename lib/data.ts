@@ -6,8 +6,8 @@ export const COMPANY = {
     'JD EXIM is a trusted Indian merchant exporter committed to delivering premium-quality products, ethical sourcing, competitive pricing, timely delivery, and long-term business partnerships worldwide.',
   address: 'Surat, Gujarat 395001, India',
   email: 'sales@jdexim.com',
-  phone: '+91 98765 43210',
-  whatsapp: '919876543210',
+  phone: '+91  90544 07745',
+  whatsapp: '90544 07745',
   social: {
     linkedin: '#',
     facebook: '#',
@@ -21,7 +21,7 @@ export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   {
     label: 'About',
-    href: '/about',
+  
     children: [
       { label: 'Company', href: '/about/company' },
       { label: 'Certification', href: '/about/certification' },
@@ -30,12 +30,11 @@ export const NAV_LINKS = [
   },
   {
     label: 'Products',
-    href: '/products',
     children: [
       { label: 'Psyllium Husk', href: '/products/psyllium-husk' },
       { label: 'Eco-Friendly Packaging', href: '/products/eco-friendly-packaging' },
       { label: 'Gift Bags', href: '/products/gift-bags' },
-      { label: 'Garments', href: '/products/garments' },
+
     ],
   },
   { label: 'Gallery', href: '/gallery' },
@@ -48,7 +47,7 @@ export const PRODUCTS = [
     name: 'Psyllium Husk',
     tagline: 'Premium-grade natural dietary fiber from India',
     image:
-      'https://images.pexels.com/photos/4750274/pexels-photo-4750274.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      '/images/seeds/5.jpeg',
     shortDesc:
       'Sourced from the finest farms in Gujarat, our psyllium husk meets stringent international pharmacopeia standards.',
     features: [
@@ -64,7 +63,7 @@ export const PRODUCTS = [
     name: 'Eco-Friendly Packaging Products',
     tagline: 'Sustainable packaging for a greener planet',
     image:
-      'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      '/images/packag imges/takeaways/main.jpg',
     shortDesc:
       'Biodegradable and compostable packaging solutions crafted from recycled kraft paper and natural materials.',
     features: [
@@ -80,7 +79,7 @@ export const PRODUCTS = [
     name: 'Gift Bags',
     tagline: 'Elegant handcrafted gift bags for every occasion',
     image:
-      'https://images.pexels.com/photos/6214476/pexels-photo-6214476.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      '/images/gifting/1.jpeg',
     shortDesc:
       'Premium-quality gift bags in a variety of designs, materials, and finishes — perfect for retail and gifting.',
     features: [
@@ -91,21 +90,117 @@ export const PRODUCTS = [
     ],
     highlights: ['Handcrafted Quality', 'Custom Prints & Logos', 'Bulk Order Discounts', 'Fast Turnaround'],
   },
+
+];
+
+export const PSYLLIUM_HUSK_IMAGES = [
+  '/images/seeds/1.jpeg',
+  '/images/seeds/2.jpeg',
+  '/images/seeds/3.jpeg',
+  '/images/seeds/4.png',
+  '/images/seeds/5.jpeg',
+];
+
+export const GIFT_BAG_IMAGES = [
+  '/images/gifting/1.jpeg',
+  '/images/gifting/2.jpeg',
+  '/images/gifting/3.jpeg',
+  '/images/gifting/4.jpeg',
+  '/images/gifting/5.jpeg',
+  '/images/gifting/6.jpeg',
+  '/images/gifting/7.jpeg',
+  '/images/gifting/8.jpeg',
+  '/images/gifting/9.jpeg',
+  '/images/gifting/10.jpeg',
+  '/images/gifting/11.jpeg',
+  '/images/gifting/12.jpeg',
+  '/images/gifting/13.jpeg',
+  '/images/gifting/14.jpeg',
+  '/images/gifting/15.jpeg',
+];
+
+const PACKAGING_BASE = '/images/packag imges';
+
+export const ECO_PACKAGING_CATEGORIES = [
   {
-    slug: 'garments',
-    name: 'Garments',
-    tagline: 'Quality textile exports from India',
-    image:
-      'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    shortDesc:
-      'High-quality garments manufactured in compliant facilities — from casual wear to premium fashion apparel.',
-    features: [
-      'Cotton T-Shirts & Polo Shirts',
-      'Denim & Casual Wear',
-      'Women’s Fashion Apparel',
-      'OEM & Private Label',
+    label: 'Boxes',
+    mainImage: `${PACKAGING_BASE}/boxes/Main.webp`,
+    images: [
+      `${PACKAGING_BASE}/boxes/13x13x1.5-generic-large-pizza-box-brown-box-800x800_250x250_2-removebg-preview.png`,
+      `${PACKAGING_BASE}/boxes/burger-box-1632372804-6005516-removebg-preview.png`,
+      `${PACKAGING_BASE}/boxes/creative-kraft-paper-sandwich-box-eco-friendly-copy-removebg-preview.png`,
+      `${PACKAGING_BASE}/boxes/Lunch-Box-Medium.png`,
+      `${PACKAGING_BASE}/boxes/Medium-4.png`,
+      `${PACKAGING_BASE}/boxes/Medium-5.png`,
+      `${PACKAGING_BASE}/boxes/WhatsApp_Image_2023-01-21_at_5.44.31_PM-removebg-preview.png`,
     ],
-    highlights: ['OEKO-TEX Certified', 'Ethical Manufacturing', 'Custom Designs', 'Low MOQ Available'],
+  },
+  {
+    label: 'Cups',
+    mainImage: `${PACKAGING_BASE}/cups/main.webp`,
+    images: [
+      `${PACKAGING_BASE}/cups/3000176877.png`,
+      `${PACKAGING_BASE}/cups/3000176882-550x550.png`,
+      `${PACKAGING_BASE}/cups/3000176892.png`,
+      `${PACKAGING_BASE}/cups/3417752558-removebg-preview.png`,
+      `${PACKAGING_BASE}/cups/525f508a21f0b1b-removebg-preview.png`,
+    ],
+  },
+  {
+    label: 'Cup Lids',
+    mainImage: `${PACKAGING_BASE}/cup lids/main.jpg`,
+    images: [
+      `${PACKAGING_BASE}/cup lids/102.png`,
+      `${PACKAGING_BASE}/cup lids/170ea1_0f2e8594afa0475eb52a0dcdbab9eb9e_mv2.jpg`,
+      `${PACKAGING_BASE}/cup lids/330-paper-lid-with-straw-cut-1000x1000-removebg-preview.png`,
+      `${PACKAGING_BASE}/cup lids/Medium-removebg-preview.png`,
+    ],
+  },
+  {
+    label: 'Containers',
+    mainImage: `${PACKAGING_BASE}/container/main.jpg`,
+    images: [
+      `${PACKAGING_BASE}/container/41Lc1KI8J4L._AC_SS450_.jpg`,
+      `${PACKAGING_BASE}/container/Ha532b3d1a8a24fd484d90eea141d80ba9_1445x.webp`,
+      `${PACKAGING_BASE}/container/Paper-Salad-Bowls-1.jpg`,
+      `${PACKAGING_BASE}/container/Sugarcane-Bagasse-Constarch-Biodegradable-Disposable-Take-Away-Food-Container.jpg`,
+    ],
+  },
+  {
+    label: 'Takeaways',
+    mainImage: `${PACKAGING_BASE}/takeaways/main.jpg`,
+    images: [
+      `${PACKAGING_BASE}/takeaways/ALRB-1000ml_2_800x-removebg-preview.png`,
+      `${PACKAGING_BASE}/takeaways/ALRC-1000ml_1_800x-removebg-preview.png`,
+      `${PACKAGING_BASE}/takeaways/ALRC-1000ml_3_800x-removebg-preview.png`,
+      `${PACKAGING_BASE}/takeaways/Lid-ALRB-500ml_1_1800x-removebg-preview.png`,
+      `${PACKAGING_BASE}/takeaways/Lid-ALRC-500-650ml_1_800x-removebg-preview.png`,
+      `${PACKAGING_BASE}/takeaways/ZPBW002_2_-550x550-removebg-preview.png`,
+    ],
+  },
+  {
+    label: 'Tableware',
+    mainImage: `${PACKAGING_BASE}/Tableware/main.jpg`,
+    images: [
+      `${PACKAGING_BASE}/Tableware/24.png`,
+      `${PACKAGING_BASE}/Tableware/3cp_640-removebg-preview.png`,
+      `${PACKAGING_BASE}/Tableware/450-ml-Hamburger-Box-1-removebg-preview.png`,
+      `${PACKAGING_BASE}/Tableware/4cptray-4-removebg-preview.png`,
+      `${PACKAGING_BASE}/Tableware/51iGO9Qo-UL-removebg-preview.png`,
+      `${PACKAGING_BASE}/Tableware/68.png`,
+      `${PACKAGING_BASE}/Tableware/71LdkqEd9tL._SL1500_-removebg-preview.png`,
+      `${PACKAGING_BASE}/Tableware/8cptray-2-removebg-preview.png`,
+    ],
+  },
+  {
+    label: 'Wooden Cutlery',
+    mainImage: `${PACKAGING_BASE}/wooden cutlury/main.jpeg`,
+    images: [
+      `${PACKAGING_BASE}/wooden cutlury/180-x-1-50mm-eco-friendly-disposable-hard-wooden-stirrer-for-soft-and-hard-drinks-366-removebg-preview-300x300.png`,
+      `${PACKAGING_BASE}/wooden cutlury/chop-sticks-500x500-removebg-preview-1.png`,
+      `${PACKAGING_BASE}/wooden cutlury/NewProject_9-removebg-preview.png`,
+      `${PACKAGING_BASE}/wooden cutlury/W1_1-removebg-preview-1.png`,
+    ],
   },
 ];
 
@@ -257,28 +352,60 @@ export const KEY_PERSONS = [
     name: 'Jay Chotaliya',
     role: 'Founder & Managing Director',
     bio: 'With over 20 years in international trade, Jignesh leads JD EXIM’s strategic vision and global partnerships.',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/key-persons/jay.jpeg',
   },
   {
     name: 'Dipak Gaddam',
     role: 'Founder & Managing Director',
     bio: 'Deepak oversees export operations across 40+ countries, ensuring compliance and seamless logistics.',
-    image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/key-persons/dipak.jpeg',
   },
 
 ];
 
-export const GALLERY_IMAGES = [
+export type GalleryImage = {
+  src: string;
+  alt: string;
+  category: 'Products' | 'Logistics' | 'Infrastructure';
+  product?: string;
+};
+
+export const PRODUCT_GALLERY_IMAGES: GalleryImage[] = [
+  ...PSYLLIUM_HUSK_IMAGES.map((src, i) => ({
+    src,
+    alt: `Psyllium Husk ${i + 1}`,
+    category: 'Products' as const,
+    product: 'Psyllium Husk',
+  })),
+  ...GIFT_BAG_IMAGES.map((src, i) => ({
+    src,
+    alt: `Gift Bags ${i + 1}`,
+    category: 'Products' as const,
+    product: 'Gift Bags',
+  })),
+  ...ECO_PACKAGING_CATEGORIES.flatMap((cat) => [
+    {
+      src: cat.mainImage,
+      alt: `${cat.label} — Eco-Friendly Packaging`,
+      category: 'Products' as const,
+      product: 'Eco-Friendly Packaging',
+    },
+    ...cat.images.map((src, i) => ({
+      src,
+      alt: `${cat.label} ${i + 1}`,
+      category: 'Products' as const,
+      product: 'Eco-Friendly Packaging',
+    })),
+  ]),
+];
+
+export const GALLERY_IMAGES: GalleryImage[] = [
   { src: 'https://images.pexels.com/photos/2240207/pexels-photo-2240207.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Cargo ship at port', category: 'Logistics' },
   { src: 'https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Shipping containers', category: 'Logistics' },
-  { src: 'https://images.pexels.com/photos/4750274/pexels-photo-4750274.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Psyllium products', category: 'Products' },
-  { src: 'https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Eco-friendly packaging', category: 'Products' },
-  { src: 'https://images.pexels.com/photos/6214476/pexels-photo-6214476.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Gift bags display', category: 'Products' },
-  { src: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Garments rack', category: 'Products' },
-  { src: 'https://images.pexels.com/photos/808836/pexels-photo-808836.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Warehouse storage', category: 'Infrastructure' },
   { src: 'https://images.pexels.com/photos/356043/pexels-photo-356043.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Port crane loading', category: 'Logistics' },
-  { src: 'https://images.pexels.com/photos/1267335/pexels-photo-1267335.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Textile manufacturing', category: 'Infrastructure' },
   { src: 'https://images.pexels.com/photos/264787/pexels-photo-264787.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Cargo plane loading', category: 'Logistics' },
+  { src: 'https://images.pexels.com/photos/808836/pexels-photo-808836.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Warehouse storage', category: 'Infrastructure' },
+  { src: 'https://images.pexels.com/photos/1267335/pexels-photo-1267335.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Textile manufacturing', category: 'Infrastructure' },
   { src: 'https://images.pexels.com/photos/5998148/pexels-photo-5998148.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Quality inspection', category: 'Infrastructure' },
-  { src: 'https://images.pexels.com/photos/6214479/pexels-photo-6214479.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Retail packaging', category: 'Products' },
+  ...PRODUCT_GALLERY_IMAGES,
 ];

@@ -70,13 +70,17 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-gold font-poppins font-semibold text-sm uppercase tracking-wider">
+            <div className="flex items-center justify-center  mb-5">
+            <div className="w-12 h-[2px] bg-gold"></div>
+
+            <span className="mx-4 text-gold font-poppins font-semibold text-xl uppercase tracking-wider whitespace-nowrap">
               About JD EXIM
             </span>
-            <h2 className="font-jakarta font-bold text-3xl md:text-4xl text-text-dark mt-3 mb-5 leading-tight">
-            JD EXIM, a global export brand of J&D FutureTech
-            </h2>
-            <p className="text-text-muted leading-relaxed mb-6">
+
+            <div className="w-12 h-[2px] bg-gold"></div>
+          </div>
+                    
+            <p className=" leading-relaxed mb-6 text-lg">
             JD EXIM is a global export brand of J&D FutureTech, provides reliable export solutions in agriculture, eco-friendly packaging, gift bags, and apparel. We are dedicated to supplying premium products through ethical sourcing, rigorous quality assurance, and seamless logistics. Our mission is to connect international buyers with trusted Indian manufacturers while creating sustainable value through quality, transparency, and long-term business relationships.
             </p>
 
@@ -84,8 +88,8 @@ export default function AboutSection() {
      
 
             <Link
-              href="/about"
-              className="inline-flex items-center gap-2 text-green-primary font-poppins font-semibold hover:gap-3 transition-all"
+              href="/about/company"
+              className="inline-flex items-center gap-2 text-gold font-poppins font-semibold hover:gap-3 transition-all"
             >
               Know More
               <ArrowRight className="w-4 h-4" />

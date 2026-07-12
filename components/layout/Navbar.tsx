@@ -23,7 +23,7 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full">
       {/* Top contact bar */}
-      <div className="hidden lg:block bg-green-dark text-white/90 text-sm">
+      <div className="hidden lg:block bg-blue-800 text-white/90 text-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-10">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
@@ -76,10 +76,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex lg:grid lg:grid-cols-[1fr_auto_1fr] items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <div className="relative w-12 h-12">
-              <Image src="/images/logo/logo.png" alt="JD EXIM Logo" fill className="object-contain" priority />
+              <Image src="/images/logo/logo1_icon.png" alt="JD EXIM Logo" fill className="object-contain" priority />
             </div>
             <div className={`font-jakarta font-bold text-xl ${scrolled ? 'text-green-dark' : 'text-white'}`}>
-              JD EXIM
+              <Image src="/images/logo/logo1_name.png" alt="JD EXIM Logo" width={100} height={100} className="object-contain" />
             </div>
           </Link>
 
@@ -93,17 +93,17 @@ export default function Navbar() {
                   onMouseEnter={() => setDropdownOpen(link.label)}
                   onMouseLeave={() => setDropdownOpen(null)}
                 >
-                  <Link
-                    href={link.href}
+                  <button
+                    type="button"
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg font-bold text-lg transition-colors ${
                       scrolled
-                        ? 'text-text-dark hover:text-green-primary'
-                        : 'text-white/90 hover:text-white'
+                        ? 'text-gray-800 hover:text-gold'
+                        : 'text-gray-800 hover:text-blue-900'
                     }`}
                   >
                     {link.label}
                     <ChevronDown className="w-3.5 h-3.5" />
-                  </Link>
+                  </button>
                   <AnimatePresence>
                     {dropdownOpen === link.label && (
                       <motion.div
@@ -117,7 +117,7 @@ export default function Navbar() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-3 text-sm text-text-dark hover:bg-green-pale hover:text-green-primary transition-colors"
+                            className="block px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 hover:text-gold transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -133,7 +133,7 @@ export default function Navbar() {
                   className={`px-4 py-2 rounded-lg font-bold  text-lg transition-colors ${
                     scrolled
                       ? 'text-text-dark hover:text-green-primary'
-                      : 'text-white/90 hover:text-white'
+                      : 'text-gray-800 hover:text-blue-900'
                   }`}
                 >
                   {link.label}
@@ -177,12 +177,9 @@ export default function Navbar() {
                 {NAV_LINKS.map((link) =>
                   link.children ? (
                     <div key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="block px-3 py-2.5 text-sm font-medium text-text-dark hover:text-green-primary"
-                      >
+                      <p className="px-3 py-2.5 text-sm font-medium text-text-dark">
                         {link.label}
-                      </Link>
+                      </p>
                       <div className="pl-6 space-y-1">
                         {link.children.map((child) => (
                           <Link

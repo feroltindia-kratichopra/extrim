@@ -18,7 +18,7 @@ export default function CertificationContent() {
           className="max-w-3xl mx-auto text-center mb-14"
         >
           <div className="w-16 h-16 rounded-2xl bg-green-pale flex items-center justify-center mx-auto mb-5">
-            <ShieldCheck className="w-8 h-8 text-green-primary" />
+            <ShieldCheck className="w-8 h-8 text-blue-800" />
           </div>
           <h2 className="font-jakarta font-bold text-3xl text-text-dark mb-4">
             Our Certifications &amp; Compliance
@@ -32,7 +32,7 @@ export default function CertificationContent() {
 
         {/* Certification cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {CERTIFICATIONS.map((cert, i) => (
+          {CERTIFICATIONS.slice(0, 3).map((cert, i) => (
             <motion.div
               key={cert.name}
               initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,38 @@ export default function CertificationContent() {
               className="group bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all border border-border-light"
             >
               <div className="flex items-center gap-4 mb-4">
-                <Image src={cert.image} alt={cert.name} width={56} height={56} className="w-14 h-14 rounded-xl object-cover" />
+              <Image
+                  src={cert.image}
+                  alt={cert.name}
+                  width={50}
+                  height={50}
+                  className="object-contain  w-auto  "
+                />
+           
+              </div>
+         
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 max-w-3xl gap-6 mb-16 mx-auto">
+          {CERTIFICATIONS.slice(3).map((cert, i) => (
+            <motion.div
+              key={cert.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="group bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all border border-border-light"
+            >
+              <div className="flex items-center items-center justify-center gap-4 mb-4">
+              <Image
+                  src={cert.image}
+                  alt={cert.name}
+                  width={50}
+                  height={50}
+                  className="object-contain  w-auto  "
+                />
            
               </div>
          
@@ -51,7 +82,7 @@ export default function CertificationContent() {
         </div>
 
         {/* Compliance commitment */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -78,7 +109,7 @@ export default function CertificationContent() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

@@ -80,14 +80,17 @@ export default function ContactContent() {
               ))}
             </div>
 
-            {/* Map placeholder */}
-            <div className="rounded-2xl overflow-hidden shadow-card border border-border-light">
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=72.4714%2C23.0116%2C72.6714%2C23.1116&amp;layer=mapnik"
-                className="w-full h-64"
-                loading="lazy"
-                title="JD EXIM Location"
-              />
+            <div className="rounded-2xl overflow-hidden shadow-card border border-border-light mt-4 w-full">
+              <div className="relative w-full aspect-[4/3] sm:aspect-video">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.18800900166!2d72.65747318239129!3d21.159120355102836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1783865370085!5m2!1sen!2sin"
+                  title="JD EXIM location on Google Maps"
+                  className="absolute inset-0 h-full w-full border-0"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </motion.div>
 
@@ -195,6 +198,8 @@ export default function ContactContent() {
               </button>
             </form>
           </motion.div>
+
+          
         </div>
       </div>
     </div>

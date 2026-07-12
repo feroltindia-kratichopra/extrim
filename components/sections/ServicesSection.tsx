@@ -8,7 +8,7 @@ const ICONS: Record<string, React.ElementType> = { Ship, Search, Factory, FileTe
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-bg-section">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

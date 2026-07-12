@@ -9,7 +9,7 @@ export default function Certifications() {
   const [current, setCurrent] = useState(0);
 
   // Number of logos visible at once
-  const visibleItems = 5;
+  const visibleItems = 3;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -25,7 +25,7 @@ export default function Certifications() {
   );
 
   return (
-    <section className="py-20 bg-bg-section overflow-hidden">
+    <section className="py-20 bg-bg-light overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -47,27 +47,27 @@ export default function Certifications() {
         </motion.div>
 
         {/* Carousel */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence >
           <motion.div
             key={current}
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -60 }}
+     
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6"
           >
             {visibleCertificates.map((cert) => (
               <motion.div
                 key={cert.name}
                 whileHover={{ y: -6, scale: 1.03 }}
-                className="bg-white rounded-2xl shadow-card hover:shadow-card-hover border border-border-light p-6 flex items-center justify-center h-40 transition-all"
+                className="bg-white rounded-2xl shadow-card hover:shadow-card-hover border border-border-light p-6 flex items-center justify-center h-50 transition-all"
               >
                 <Image
                   src={cert.image}
                   alt={cert.name}
-                  width={140}
-                  height={80}
-                  className="object-contain max-h-20 w-auto"
+                  width={50}
+                  height={50}
+                  className="object-contain  w-auto  "
                 />
               </motion.div>
             ))}

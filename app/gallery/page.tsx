@@ -4,7 +4,7 @@ import GalleryContent from '@/components/gallery/GalleryContent';
 
 export const metadata = {
   title: 'Gallery — JD EXIM',
-  description: 'View our gallery showcasing logistics, products, and infrastructure.',
+  description: 'Browse our product gallery — psyllium husk, eco-friendly packaging, gift bags, and more.',
 };
 
 export default function GalleryPage() {
@@ -12,7 +12,7 @@ export default function GalleryPage() {
     <PageWrapper>
       <PageHeader
         title="Gallery"
-        subtitle="A glimpse into our products, logistics, and infrastructure."
+        subtitle="Browse our full product range — psyllium husk, eco-friendly packaging, gift bags, and more."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Gallery' }]}
       />
       <GalleryContent />

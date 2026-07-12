@@ -1,7 +1,7 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import PageHeader from '@/components/layout/PageHeader';
 import ProductDetail from '@/components/products/ProductDetail';
-
+import { ECO_PACKAGING_CATEGORIES } from '@/lib/data';
 
 export const metadata = {
   title: 'Eco-Friendly Packaging — JD EXIM',
@@ -14,12 +14,13 @@ export default function EcoFriendlyPackagingPage() {
       <PageHeader
         title="Eco-Friendly Packaging"
         subtitle="Sustainable packaging for a greener planet."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Products', href: '/products' }, { label: 'Eco-Friendly Packaging' }]}
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Products' }, { label: 'Eco-Friendly Packaging' }]}
       />
       <ProductDetail
         name="Eco-Friendly Packaging Products"
         tagline="Sustainable packaging for a greener planet"
-        image="https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        image="/images/packag imges/takeaways/main.jpg"
+        imageCategories={ECO_PACKAGING_CATEGORIES}
         shortDesc="Biodegradable and compostable packaging solutions crafted from recycled kraft paper and natural materials."
         features={[
           'Kraft Paper Bags',

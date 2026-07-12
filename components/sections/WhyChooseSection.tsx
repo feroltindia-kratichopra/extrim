@@ -59,7 +59,7 @@ export default function WhyChooseSection() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-primary to-gold transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                 <div className="flex items-start gap-4">
                   <div className="shrink-0 w-12 h-12 rounded-xl bg-green-pale group-hover:bg-gold flex items-center justify-center transition-colors">
-                    <Icon className="w-6 h-6 text-green-primary group-hover:text-white transition-colors" />
+                    <Icon className="w-6 h-6 text-blue-800 group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <h3 className="font-jakarta font-bold text-lg text-text-dark mb-2">{item.title}</h3>

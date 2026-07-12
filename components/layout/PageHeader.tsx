@@ -12,7 +12,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle, breadcrumbs }: PageHeaderProps) {
   return (
-    <section className="relative pt-28 lg:pt-[8.5rem] pb-16 bg-gradient-to-br from-green-dark via-green-primary to-green-dark overflow-hidden">
+    <section className="relative pt-28 lg:pt-[8.5rem] pb-16 bg-gradient-to-r from-blue-700/40 via-blue-100/70 to-blue-700/40 overflow-hidden">
       {/* Decorative dots */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(6)].map((_, i) => (
@@ -32,22 +32,9 @@ export default function PageHeader({ title, subtitle, breadcrumbs }: PageHeaderP
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-4">
-            {breadcrumbs.map((bc, i) => (
-              <span key={i} className="flex items-center gap-2">
-                {bc.href ? (
-                  <Link href={bc.href} className="hover:text-gold transition-colors">
-                    {bc.label}
-                  </Link>
-                ) : (
-                  <span className="text-gold">{bc.label}</span>
-                )}
-                {i < breadcrumbs.length - 1 && <ChevronRight className="w-3 h-3" />}
-              </span>
-            ))}
-          </nav>
-          <h1 className="font-jakarta font-bold text-4xl md:text-5xl text-white mb-3">{title}</h1>
-          {subtitle && <p className="text-white/80 text-lg max-w-2xl">{subtitle}</p>}
+      
+          <h1 className="font-jakarta font-bold text-4xl md:text-5xl text-gray-800 mb-3 mt-3">{title}</h1>
+          {subtitle && <p className="text-gray-800/80 text-lg max-w-2xl">{subtitle}</p>}
         </motion.div>
       </div>
     </section>

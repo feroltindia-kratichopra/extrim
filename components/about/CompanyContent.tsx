@@ -18,9 +18,9 @@ export default function CompanyContent() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-card">
+            <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-card">
               <Image
-                src="https://images.pexels.com/photos/1267335/pexels-photo-1267335.jpeg?auto=compress&cs=tinysrgb&w=900"
+                src="https://images.pexels.com/photos/36771190/pexels-photo-36771190.jpeg"
                 alt="JD EXIM facility"
                 fill
                 className="object-cover"
@@ -40,10 +40,10 @@ export default function CompanyContent() {
               JD EXIM — A Name Built on Trust
             </h2>
             <p className="text-text-muted leading-relaxed mb-4">
-              JD EXIM is a registered merchant exporter based in Ahmedabad, Gujarat — India’s
+              JD EXIM is a registered merchant exporter based in Surat, Gujarat — India’s
               premier hub for agriculture, textiles, and packaging. We specialize in exporting
               premium-quality products across four core categories: Psyllium Products,
-              Eco-Friendly Packaging, Gift Bags, and Garments.
+              Eco-Friendly Packaging and Gift Bag.
             </p>
             <p className="text-text-muted leading-relaxed mb-6">
               Our business model is built on direct relationships with verified manufacturers,
@@ -55,8 +55,7 @@ export default function CompanyContent() {
             <div className="space-y-3">
               {[
                 { icon: Building2, label: 'Business Type', value: 'Merchant Exporter' },
-                { icon: Calendar, label: 'Established', value: '2009' },
-                { icon: MapPin, label: 'Location', value: 'Ahmedabad, Gujarat, India' },
+                { icon: MapPin, label: 'Location', value: 'Surat, Gujarat, India' },
                 { icon: Mail, label: 'Email', value: COMPANY.email },
                 { icon: Phone, label: 'Phone', value: COMPANY.phone },
               ].map((item) => (
@@ -73,14 +72,15 @@ export default function CompanyContent() {
         </div>
 
         {/* What we do */}
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12"
+          className="text-center mb-14"
         >
-          <h2 className="font-jakarta font-bold text-2xl text-text-dark mb-6">Our Business Approach</h2>
+          <h2 className="font-jakarta font-bold text-3xl md:text-4xl text-text-dark mt-3 mb-4 ">Our Business Approach</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-16">
@@ -110,7 +110,7 @@ export default function CompanyContent() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="flex gap-4 bg-white rounded-2xl p-6 shadow-card border border-border-light"
             >
-              <CheckCircle2 className="w-6 h-6 text-green-primary shrink-0 mt-1" />
+              <CheckCircle2 className="w-6 h-6 text-blue-800 shrink-0 mt-1" />
               <div>
                 <h3 className="font-jakarta font-bold text-text-dark mb-2">{item.title}</h3>
                 <p className="text-sm text-text-muted leading-relaxed">{item.desc}</p>
@@ -122,7 +122,7 @@ export default function CompanyContent() {
         {/* Infrastructure */}
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { icon: Building2, title: 'Office', desc: 'Headquartered in Ahmedabad with a dedicated team of export professionals.' },
+            { icon: Building2, title: 'Office', desc: 'Headquartered in Surat with a dedicated team of export professionals.' },
             { icon: MapPin, title: 'Warehouse', desc: 'Partner warehouses for consolidation, repacking, and quality checks.' },
             { icon: Calendar, title: 'Operations', desc: 'Full-cycle export operations from order to delivery.' },
           ].map((item, i) => (

@@ -1,6 +1,7 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import PageHeader from '@/components/layout/PageHeader';
 import ProductDetail from '@/components/products/ProductDetail';
+import { GIFT_BAG_IMAGES } from '@/lib/data';
 
 export const metadata = {
   title: 'Gift Bags — JD EXIM',
@@ -13,12 +14,13 @@ export default function GiftBagsPage() {
       <PageHeader
         title="Gift Bags"
         subtitle="Elegant handcrafted gift bags for every occasion."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Products', href: '/products' }, { label: 'Gift Bags' }]}
+        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Products' }, { label: 'Gift Bags' }]}
       />
       <ProductDetail
         name="Gift Bags"
         tagline="Elegant handcrafted gift bags for every occasion"
-        image="https://images.pexels.com/photos/6214476/pexels-photo-6214476.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        image="/images/gifting/1.jpeg"
+        images={GIFT_BAG_IMAGES}
         shortDesc="Premium-quality gift bags in a variety of designs, materials, and finishes — perfect for retail and gifting."
         features={[
           'Kraft Paper Gift Bags',
