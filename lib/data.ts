@@ -359,16 +359,16 @@ export const KEY_PERSONS = [
   {
     name: 'Jay Chotaliya',
     role: 'Founder & Managing Director',
-    bio: 'With over 20 years in international trade, Jignesh leads JD EXIM’s strategic vision and global partnerships.',
+    bio: 'Jay Chotaliya is the Co-Founder of JD EXIM . He has experience in export operations, production management, supply chain coordination, and business development. He oversees international trade, quality assurance, client relationships, and operational excellence, ensuring timely delivery of high-quality products to global customers.',
     phone: '+91  90544 07745',
     image: '/images/key-persons/jay.jpeg',
   },
   {
     name: 'Dipak Gaddam',
     role: 'Founder & Managing Director',
-    bio: 'Dipak oversees export operations across 40+ countries, ensuring compliance and seamless logistics.',
+    bio: "Dipak Gaddam is the Co-Founder of JD EXIM . He has experience in technology, business development, and strategic planning. He focuses on driving business growth, developing client relationships, implementing technology-driven solutions, and supporting the company's global expansion initiatives.",
     phone: '+91 9725359219',
-    image: '/images/key-persons/dipak.jpeg',
+    image: '/images/key-persons/dipak.png',
   },
   
 

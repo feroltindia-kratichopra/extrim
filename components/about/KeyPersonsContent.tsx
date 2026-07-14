@@ -42,7 +42,7 @@ export default function KeyPersonsContent() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all border border-border-light"
             >
-              <div className="relative h-64 w-full overflow-hidden flex items-center justify-center">
+              <div className="relative h-[350px] w-full overflow-hidden flex items-center justify-center">
                 <Image
                   src={person.image}
                   alt={person.name}
