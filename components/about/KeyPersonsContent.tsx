@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, Phone } from 'lucide-react';
 import { KEY_PERSONS } from '@/lib/data';
 
 export default function KeyPersonsContent() {
@@ -49,7 +49,6 @@ export default function KeyPersonsContent() {
                   fill
                   className="object-cover object-center transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-dark/60 to-transparent" />
               </div>
               <div className="p-5">
                 <h3 className="font-jakarta font-bold text-lg text-text-dark mb-1">{person.name}</h3>
@@ -70,6 +69,13 @@ export default function KeyPersonsContent() {
                   >
                     <Mail className="w-4 h-4 text-green-primary hover:text-white transition-colors" />
                   </a>
+                  <div
+                 
+                    className="w-9 h-9 rounded-full bg-green-pale hover:bg-green-primary flex items-center justify-center transition-colors"
+                    aria-label={`${person.name} Phone`}
+                  >
+                    <Phone className="w-4 h-4 text-green-primary hover:text-white transition-colors" />
+                  </div><span className="text-sm text-text-muted flex items-center gap-2">{person.phone}</span>
                 </div>
               </div>
             </motion.div>

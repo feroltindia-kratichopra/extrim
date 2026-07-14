@@ -6,14 +6,13 @@ export const COMPANY = {
     'JD EXIM is a trusted Indian merchant exporter committed to delivering premium-quality products, ethical sourcing, competitive pricing, timely delivery, and long-term business partnerships worldwide.',
   address: 'Surat, Gujarat 395001, India',
   email: 'sales@jdexim.com',
-  phone: '+91  90544 07745',
-  whatsapp: '90544 07745',
+  phone: '+91  90544 07745/ +91 9725359219',
+  whatsapp: '9054407745',
   social: {
-    linkedin: '#',
-    facebook: '#',
-    instagram: '#',
-    twitter: '#',
-    youtube: '#',
+    linkedin: 'https://www.linkedin.com/company/jd-exim/',
+    facebook: 'https://www.facebook.com/share/1PgvDmQygo/',
+    instagram: 'https://www.instagram.com/jdexim_globe?igsh=MWJpcTZwdXY3dDRraA==',
+
   },
 };
 
@@ -37,6 +36,15 @@ export const NAV_LINKS = [
 
     ],
   },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Contact', href: '/contact' },
+];
+
+export const FOOTER_LINKS = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/company' },
+  { label: 'Certification', href: '/about/certification' },
+  { label: 'Products', href: '/products' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -79,7 +87,7 @@ export const PRODUCTS = [
     name: 'Gift Bags',
     tagline: 'Elegant handcrafted gift bags for every occasion',
     image:
-      '/images/gifting/1.jpeg',
+      '/images/gifting/4.jpeg',
     shortDesc:
       'Premium-quality gift bags in a variety of designs, materials, and finishes — perfect for retail and gifting.',
     features: [
@@ -352,21 +360,24 @@ export const KEY_PERSONS = [
     name: 'Jay Chotaliya',
     role: 'Founder & Managing Director',
     bio: 'With over 20 years in international trade, Jignesh leads JD EXIM’s strategic vision and global partnerships.',
+    phone: '+91  90544 07745',
     image: '/images/key-persons/jay.jpeg',
   },
   {
     name: 'Dipak Gaddam',
     role: 'Founder & Managing Director',
-    bio: 'Deepak oversees export operations across 40+ countries, ensuring compliance and seamless logistics.',
+    bio: 'Dipak oversees export operations across 40+ countries, ensuring compliance and seamless logistics.',
+    phone: '+91 9725359219',
     image: '/images/key-persons/dipak.jpeg',
   },
+  
 
 ];
 
 export type GalleryImage = {
   src: string;
   alt: string;
-  category: 'Products' | 'Logistics' | 'Infrastructure';
+  category: 'Products' ;
   product?: string;
 };
 
@@ -400,12 +411,6 @@ export const PRODUCT_GALLERY_IMAGES: GalleryImage[] = [
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { src: 'https://images.pexels.com/photos/2240207/pexels-photo-2240207.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Cargo ship at port', category: 'Logistics' },
-  { src: 'https://images.pexels.com/photos/93398/pexels-photo-93398.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Shipping containers', category: 'Logistics' },
-  { src: 'https://images.pexels.com/photos/356043/pexels-photo-356043.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Port crane loading', category: 'Logistics' },
-  { src: 'https://images.pexels.com/photos/264787/pexels-photo-264787.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Cargo plane loading', category: 'Logistics' },
-  { src: 'https://images.pexels.com/photos/808836/pexels-photo-808836.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Warehouse storage', category: 'Infrastructure' },
-  { src: 'https://images.pexels.com/photos/1267335/pexels-photo-1267335.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Textile manufacturing', category: 'Infrastructure' },
-  { src: 'https://images.pexels.com/photos/5998148/pexels-photo-5998148.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Quality inspection', category: 'Infrastructure' },
+
   ...PRODUCT_GALLERY_IMAGES,
 ];

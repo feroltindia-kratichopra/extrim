@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { GALLERY_IMAGES } from '@/lib/data';
 
-const CATEGORIES = ['All', 'Products', 'Logistics', 'Infrastructure'] as const;
+const CATEGORIES = ['All', 'Products'] as const;
 const PRODUCT_TABS = ['All Products', 'Psyllium Husk', 'Gift Bags', 'Eco-Friendly Packaging'] as const;
 
 type Category = (typeof CATEGORIES)[number];
@@ -98,8 +98,8 @@ export default function GalleryContent() {
                     img.category === 'Products' ? 'object-contain p-2' : 'object-cover'
                   }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                  <p className="text-white text-sm font-jakarta font-bold">{img.alt}</p>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                  {/* <p className="text-white text-sm font-jakarta font-bold">{img.alt}</p> */}
                   <p className="text-gold text-xs">{img.product ?? img.category}</p>
                 </div>
               </motion.div>

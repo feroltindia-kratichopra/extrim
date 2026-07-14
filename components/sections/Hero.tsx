@@ -64,7 +64,9 @@ export default function Hero() {
             transition={{ duration: 6, ease: 'easeOut' }}
             className="absolute inset-0"
           >
-            <Image src={SLIDES[current].image} alt={SLIDES[current].title} fill className="object-cover" priority />
+            <Image src={SLIDES[current].image} alt={SLIDES[current].title}   fill
+                className="object-cover object-top md:object-center lg:object-center"
+              priority />
           </motion.div>
           <div className="absolute inset-0 bg-gray-200/40" />
         </motion.div>

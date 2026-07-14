@@ -31,6 +31,7 @@ export default function ProductsSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {PRODUCTS.map((product, i) => (
+            <Link key={product.slug} href={`/products/${product.slug}`}>
             <motion.div
               key={product.slug}
               initial={{ opacity: 0, y: 30 }}
@@ -55,6 +56,7 @@ export default function ProductsSection() {
               </div>
 
             </motion.div>
+            </Link>
           ))}
         </div>
       </div>
