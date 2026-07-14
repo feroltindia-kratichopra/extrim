@@ -54,7 +54,7 @@ export default function AboutSection() {
           >
             <div className="relative h-[350px] rounded-3xl overflow-hidden shadow-card">
               <Image
-                src="https://images.pexels.com/photos/36771190/pexels-photo-36771190.jpeg"
+                src="/images/about_company.png"
                 alt="JD EXIM warehouse"
                 fill
                 className="object-cover"

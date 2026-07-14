@@ -1,7 +1,6 @@
 import PageWrapper from '@/components/layout/PageWrapper';
 import PageHeader from '@/components/layout/PageHeader';
 import CompanyContent from '@/components/about/CompanyContent';
-
 import WhyChooseSection from '@/components/sections/WhyChooseSection';
 
 export const metadata = {

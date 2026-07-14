@@ -20,7 +20,7 @@ export default function CompanyContent() {
           >
             <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-card">
               <Image
-                src="https://images.pexels.com/photos/36771190/pexels-photo-36771190.jpeg"
+                src="/images/about_company.png"
                 alt="JD EXIM facility"
                 fill
                 className="object-cover"
